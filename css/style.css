@@ -1536,6 +1536,14 @@ html[dir='ltr'] .register .radio-item-1 input[type="radio"] {
     margin-top: 30px;
 }
 
+html[dir='rtl'] .register .info-3 {
+    text-align: end;
+}
+
+html[dir='ltr'] .register .info-3 {
+    text-align: start;
+}
+
 .register .info-3 a {
     display: inline-block;
     text-align: center;
