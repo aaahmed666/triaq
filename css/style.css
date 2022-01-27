@@ -122,8 +122,8 @@ h4 {
     font-weight: 600;
     font-style: italic;
     font-display: swap;
-    src:
-
+    src:url("../fonts/Oswald/Oswald-Demi-BoldItalic.woff2"),
+        url("../fonts/Oswald/Oswald-Demi-BoldItalic.woff"),
         url("../fonts/Oswald/Oswald\ Demi-BoldItalic\ 600.ttf");
 }
 
@@ -132,8 +132,8 @@ h4 {
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    src:
-
+    src:url("../fonts/Oswald/Oswald-RegularItalic.woff2"),
+        url("../fonts/Oswald/Oswald-RegularItalic.woff"),
         url("../fonts/Oswald/Oswald\ RegularItalic\ 400.ttf");
 }
 
@@ -1576,8 +1576,15 @@ html[dir='ltr'] .register .radio-item-1 input[type="radio"] {
 .register form input.location {
     background: url("../map-marker-alt-solid.svg") no-repeat;
     background-size: 18px;
-    background-position: top 10px left 20px;
     background-color: #FFF;
+}
+
+html[dir='rtl'] .register form input.location {
+    background-position: top 10px left 20px;
+}
+
+html[dir='ltr'] .register form input.location {
+    background-position: top 10px right 20px;
 }
 
 @media (max-width:991px) {
