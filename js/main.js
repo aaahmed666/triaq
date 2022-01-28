@@ -87,7 +87,7 @@ $(document).ready(function() {
           $('.footer .fast i').toggleClass('fa-chevron-down fa-chevron-up');
           $('.footer .speed').slideToggle(function(){
             if ($(this).is(':visible'))
-            $(this).css('display','flex');
+            $(this).css('display','inline-block');
           });
       });
   }
