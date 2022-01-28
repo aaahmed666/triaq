@@ -85,11 +85,8 @@ $(document).ready(function() {
     if($(window).width() < 767) {
       $('.footer .fast').click (function () {
           $('.footer .fast i').toggleClass('fa-chevron-down fa-chevron-up');
-          $('.footer .speed').slideToggle(function(){
-            if ($(this).is(':visible'))
-            $(this).css('display','inline-block');
+          $('.footer .speed').slideToggle();
           });
-      });
   }
 });
 

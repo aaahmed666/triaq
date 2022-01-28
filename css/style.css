@@ -497,7 +497,7 @@ html[dir='ltr'] .header .sign a {
 
 @media (max-width:576px) {
     .header {
-        padding: 15px;
+        padding: 15px 0;
     }
     html[dir='rtl'] .header .sign a {
         font-size: 15px;
@@ -1149,7 +1149,7 @@ html[dir='ltr'] .offer .price del {
 
 @media (max-width:576px) {
     .partner {
-        padding: 30px 0 40px 0;
+        padding: 30px 0 60px 0;
     }
     .partner .swiper {
         padding: 0 15px;
