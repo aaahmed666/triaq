@@ -264,7 +264,7 @@ a {
 
 .header .lang {
     position: absolute;
-    top: 62px;
+    top: 60px;
     right: 0;
 }
 
@@ -377,7 +377,7 @@ html[dir='ltr'] .header .sign a {
 }
 
 
-@media (max-width:991px) {
+@media (max-width:1199px) {
     .header .lang {
         position: fixed;
         top: 75px;
@@ -569,7 +569,7 @@ html[dir='ltr'] .information form .label-2 {
 }
 
 .information input[type="search"] {
-    width: 315px;
+    width: 100%;
     height: 45px;
     margin: 10px auto 5px;
     outline: none;
@@ -660,7 +660,7 @@ html[dir='ltr'] .information .radio-item-1 span {
 }
 
 .select2-container {
-    width: 315px !important;
+    width: 100% !important;
     margin: 0 auto 5px;
 }
 
@@ -797,14 +797,6 @@ html[dir='ltr'] .select2-results__option {
         margin-bottom: 15px;
     }
 
-    .information input[type="search"] {
-        width: 550px;
-    }
-
-    .select2-container {
-        width: 550px !important;
-    }
-
     .information .info {
         width: 550px;
     }
@@ -833,14 +825,6 @@ html[dir='ltr'] .select2-results__option {
 @media (max-width:767px) {
     .information .label {
         margin: 0 40px;
-    }
-
-    .information input[type="search"] {
-        width: 450px;
-    }
-
-    .select2-container {
-        width: 450px !important;
     }
 
     .information form label {
@@ -924,13 +908,6 @@ html[dir='ltr'] .select2-results__option {
         left: 110px;
     }
 
-    .information input[type="search"] {
-        width: 300px;
-    }
-
-    .select2-container {
-        width: 300px !important;
-    }
 
     .information .info {
         width: 300px;
@@ -1257,6 +1234,10 @@ html[dir='ltr'] .offer .price del {
     }
     .footer .photo {
         display: flex;
+        flex-wrap: wrap;
+    }
+    .footer .photo img {
+        margin: 10px;
     }
 }
 
@@ -1317,12 +1298,8 @@ html[dir='ltr'] .last-footer i {
 }
 
 @media (max-width:767px) {
-    .last-footer {
-        padding: 5px 0;
-    }
-
     .last-footer p.text {
-        font-size: 11px;
+        font-size: 10px;
         margin-bottom: 10px;
     }
 
@@ -1473,7 +1450,7 @@ html[dir='ltr'] .register .radio-item-1 input[type="radio"] {
 }
 
 .register .select2-container {
-    width: 385px !important;
+    width: 100% !important;
     margin: 0;
 }
 
@@ -1611,9 +1588,6 @@ html[dir='ltr'] .register form input.location {
         width: 70%;
         margin: auto !important;
     }
-    .register .select2-container {
-        width: 485px !important;
-    }
     .register p.title {
         margin-top: 50px;
     }
@@ -1622,9 +1596,6 @@ html[dir='ltr'] .register form input.location {
 @media (max-width:767px) {
     .tab .nav-item {
         margin-bottom: 10px;
-    }
-    .register .select2-container {
-        width: 360px !important;
     }
 }
 
@@ -1662,9 +1633,6 @@ html[dir='ltr'] .register form input.location {
     }
     .register .radio-item-1 a {
         font-size: 12px;
-    }
-    .register .select2-container {
-        width: 285px !important;
     }
     .register .info-1 {
         width: 100px;
