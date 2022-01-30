@@ -18,10 +18,10 @@
 }
 
 body {
-    background-image: url("../image/bg.png");
+    background-color: var(--headerbg-color);
+    background-image: url("../image2vector.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top right;
+    background-position: top 245px right;
 }
 
 body.ovh {
@@ -33,7 +33,7 @@ html[dir="ltr"] body {
 }
 
 html[dir="rtl"] body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'GEFlow', sans-serif;
 }
 
 html[dir="rtl"] body {
@@ -262,30 +262,16 @@ a {
     position: relative;
 }
 
-.header .lang {
+/* .header .lang {
     position: absolute;
     top: 60px;
     right: 0;
-}
+} */
 
 .header .header__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-html[dir='rtl'] .header .header__logo .logo {
-    margin-left: 15px;
-}
-
-html[dir='ltr'] .header .header__logo .logo {
-    margin-right: 15px;
 }
 
 .header .header__menu {
@@ -309,7 +295,7 @@ html[dir='ltr'] .header .header__logo .logo {
 }
 
 html[dir='rtl'] .header .header__menu a {
-    padding: 10px;
+    padding: 13px;
 }
 
 html[dir='ltr'] .header .header__menu a {
@@ -411,8 +397,9 @@ html[dir='ltr'] .header .sign a {
 
     .header .header__menu .list {
         position: fixed;
-        width: 300px;
+        width: 220px;
         height: 100%;
+        padding: 0 15px;
         background-color: #FFF;
         display: flex;
         justify-content: flex-start;
@@ -425,7 +412,7 @@ html[dir='ltr'] .header .sign a {
     }
 
     html[dir='rtl'] .header .header__menu .list {
-        right: -300px;
+        right: -220px;
         left: 0;
     }
 
@@ -435,7 +422,7 @@ html[dir='ltr'] .header .sign a {
     }
 
     html[dir='ltr'] .header .header__menu .list {
-        left: -300px;
+        left: -220px;
         right: 0;
     }
 
@@ -453,11 +440,11 @@ html[dir='ltr'] .header .sign a {
     }
 
     html[dir='rtl'] .header .header__menu ul {
-        right: -300px;
+        right: -220px;
     }
 
     html[dir='ltr'] .header .header__menu ul {
-        left: -300px;
+        left: -220px;
     }
 
     .header .header__menu ul li {
@@ -471,11 +458,11 @@ html[dir='ltr'] .header .sign a {
     }
 
     html[dir='rtl'] .header .close {
-        right: -300px;
+        right: -220px;
     }
 
     html[dir='ltr'] .header .close {
-        left: -300px;
+        left: -220px;
     }
 
     html[dir='rtl'] .header .header__menu ul.open {
@@ -487,17 +474,21 @@ html[dir='ltr'] .header .sign a {
     }
 
     html[dir='rtl'] .header .close.open {
-        right: 260px;
+        right: 190px;
     }
 
     html[dir='ltr'] .header .close.open {
-        left: 260px;
+        left: 190px;
     }
 }
 
 @media (max-width:576px) {
     .header {
         padding: 15px 0;
+    }
+
+    .header .header__logo img {
+        width: 130px;
     }
 
     html[dir='rtl'] .header .sign a {
@@ -574,11 +565,17 @@ html[dir='ltr'] .information form .label-2 {
     width: 100%;
     height: 45px;
     margin: 10px auto 5px;
+    font-size: 14px;
     outline: none;
     border-radius: 40px;
     padding: 0 30px;
     border: 1px solid #FFF;
     color: #a0a1a1;
+    transition: all 0.3s ease;
+}
+
+.information input[type="search"]:focus {
+    border: 1px solid var(--main-color);
 }
 
 .information .info {
@@ -625,7 +622,8 @@ html[dir='ltr'] .information .info i {
     background-color: var(--primary-color);
 }
 
-.information .radio-item-1 input[type="radio"] {
+.information .radio-item-1 input[type="radio"],
+.information .radio-item-1 input[type="checkbox"] {
     display: none;
 }
 
@@ -679,8 +677,6 @@ html[dir='ltr'] .select2-container {
     display: none;
 }
 
-
-
 .select2-container--default .select2-selection--single {
     height: 45px;
     direction: ltr;
@@ -701,17 +697,17 @@ html[dir='ltr'] .select2-container--default .select2-selection--single {
     text-align: end;
     line-height: 45px;
     font-size: 14px;
-    background: url("../chevron-down-solid.svg");
+    background: url("../angle-down-solid.svg");
     background-repeat: no-repeat;
-    background-size: 14px;
+    background-size: 10px;
 }
 
 html[dir='rtl'] .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
-    background-position: top 15px left 30px;
+    background-position: top 12px left 30px;
 }
 
 html[dir='ltr'] .select2-container[dir="ltr"] .select2-selection--single .select2-selection__rendered {
-    background-position: top 15px right 30px;
+    background-position: top 12px right 30px;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -763,6 +759,16 @@ html[dir='ltr'] .select2-results__option {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #a0a1a1;
     line-height: 45px;
+    font-size: 14px;
+    font-family: "GEFlow";
+}
+
+html[dir='rtl'] .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-family: "GEFlow";
+}
+
+html[dir='ltr'] .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-family: "Open Sans";
 }
 
 .select2-container--open .select2-dropdown {
@@ -1272,6 +1278,18 @@ html[dir='ltr'] .footer a:hover {
     color: #5b94a2;
 }
 
+.last-footer p.text a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    color: #5b94a2;
+    transition: all 0.3s ease-in-out;
+}
+
+.last-footer p.text a:hover {
+    color: var(--theme-color);
+}
+
 .last-footer .social a {
     text-decoration: none;
 }
@@ -1283,6 +1301,7 @@ html[dir='ltr'] .footer a:hover {
     line-height: 32px;
     color: #FFF;
     border-radius: 50%;
+    transition: all 0.3s ease-in-out;
 }
 
 html[dir='rtl'] .last-footer i {
@@ -1307,6 +1326,10 @@ html[dir='ltr'] .last-footer i {
 
 .last-footer i.fa-facebook-f {
     background-color: #3b5998;
+}
+
+.last-footer i:hover {
+    background-color: var(--theme-color);
 }
 
 @media (max-width:767px) {
@@ -1352,7 +1375,7 @@ html[dir='ltr'] .last-footer i {
     content: "";
     top: 50%;
     left: 50%;
-    height: 630px;
+    height: 75%;
     width: 1px;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.1);
@@ -1442,6 +1465,8 @@ html[dir='ltr'] .register form {
     font-size: 16px;
     color: #FFF;
     margin: 15px 10px;
+    width: 100%;
+    text-align: start;
 }
 
 .register form input[type="text"] {
@@ -1453,15 +1478,11 @@ html[dir='ltr'] .register form {
     font-size: 16px;
     color: #000;
     padding: 0 20px;
+    transition: all 0.3s ease;
 }
 
-.register form .label-7 {
-    font-size: 16px;
-    color: #FFF;
-    margin: 25px 0 40px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.register input[type="text"]:focus {
+    border-color: var(--main-color);
 }
 
 html[dir='rtl'] .register .radio-item-1 input[type="radio"] {
@@ -1484,7 +1505,8 @@ html[dir='ltr'] .register .radio-item-1 input[type="radio"] {
     margin: 0 2px;
 }
 
-.register .radio-item-1 input[type="radio"] {
+.register .radio-item-1 input[type="radio"],
+.register .radio-item-1 input[type="checkbox"] {
     display: none;
 }
 
@@ -1570,6 +1592,11 @@ html[dir='ltr'] .register .info-1 {
     display: inline-block;
     color: #4da5c5;
     font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.register .info-2 a:hover {
+    color: var(--theme-color);
 }
 
 .register .info-3 {
@@ -1605,16 +1632,6 @@ html[dir='ltr'] .register .info-3 {
 .register .info-3 a:hover {
     color: #FFF;
     background-color: #00dca6;
-}
-
-.register form .label-8,
-.register form .label-9 {
-    font-size: 16px;
-    color: #FFF;
-    margin: 0 0 25px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .register form .label-8 i,
@@ -1680,19 +1697,19 @@ html[dir='ltr'] .register form input.location {
     }
 
     .register .top {
-        border-top: 1px;
+        border-top: 1px solid var(--theme-color);
+        width: 100%;
     }
 
     .register p.title {
         font-size: 18px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 35px;
+        margin-bottom: 25px;
     }
 
     .register form label {
         font-size: 14px;
         color: #FFF;
-        margin: 5px 10px;
     }
 
     .register form .label-7 {
@@ -1705,6 +1722,7 @@ html[dir='ltr'] .register form input.location {
     }
 
     .register .info-1 {
+        margin-bottom: 30px;
         width: 100px;
         height: 30px;
     }
