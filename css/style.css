@@ -1112,6 +1112,8 @@ html[dir='ltr'] .offer .price del {
 }
 
 .partner img {
+    width: 83px;
+    height: 77px;
     opacity: 60%;
     filter: grayscale(1);
     cursor: pointer;
@@ -1192,16 +1194,17 @@ html[dir='ltr'] .offer .price del {
     font-size: 16px;
     font-weight: 800;
     color: var(--text-color);
+    margin-bottom: 10px;
     transition: 0.3s all ease-in-out;
 }
 
 html[dir='rtl'] .footer a:hover {
-    transform: translateX(-15px);
+    transform: translateX(-5px);
     color: var(--main-color);
 }
 
 html[dir='ltr'] .footer a:hover {
-    transform: translateX(15px);
+    transform: translateX(5px);
     color: var(--main-color);
 }
 .footer .image {
@@ -1234,14 +1237,10 @@ html[dir='ltr'] .footer a:hover {
         padding: 30px 0 20px 0;
     }
     .footer .image {
-        margin-top: 30px;
+        margin-top: 20px;
     }
-    .footer .photo {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .footer .photo img {
-        margin: 10px;
+    .footer .picture {
+        margin: auto;
     }
 }
 
@@ -1303,7 +1302,7 @@ html[dir='ltr'] .last-footer i {
 
 @media (max-width:767px) {
     .last-footer p.text {
-        font-size: 10px;
+        text-align: center;
         margin-bottom: 10px;
     }
 
@@ -1311,6 +1310,15 @@ html[dir='ltr'] .last-footer i {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width:576px) {
+    .last-footer {
+        padding: 15px 0 25px 0;
+    }
+    .last-footer p.text {
+        margin-bottom: 15px;
     }
 }
 /* End last-footer */
