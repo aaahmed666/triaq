@@ -43,6 +43,44 @@ pagination: {
   },
 });
 
+var swiper = new Swiper(".new", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  autoplay: {
+      delay: 2000,
+      },
+      
+pagination: {
+  el: ".offer .swiper-pagination",
+  clickable: true,
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+    },
+    567: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    767: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+    },
+    991: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    1199: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+      },
+    },
+  },
+});
+
 var swiper = new Swiper(".partner", {
   slidesPerView: 9,
   spaceBetween: 30,
@@ -77,6 +115,20 @@ pagination: {
   },
 });
 
+var swiper = new Swiper(".single", {
+  autoplay: {
+      delay: 2000,
+      },
+pagination: {
+  el: ".single .swiper-pagination",
+  clickable: true,
+},
+navigation: {
+  nextEl: ".single .swiper-button-next",
+  prevEl: ".single .swiper-button-prev",
+},
+});
+
 
 
 $(document).ready(function() {
@@ -89,6 +141,11 @@ $(document).ready(function() {
           });
   }
 });
+
+
+
+
+
 
 //for mobile navbar
 let menu = document.querySelector(".header .header__menu .open")
