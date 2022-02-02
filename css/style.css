@@ -512,7 +512,7 @@ html[dir='ltr'] .header .sign a {
     }
 
     .header .header__logo img {
-        width: 130px;
+        width: 110px;
     }
 
     html[dir='rtl'] .header .sign a {
@@ -1135,7 +1135,7 @@ html[dir='ltr'] .offer .price del {
 
     .offer .box {
         max-width: max-content;
-        margin: auto;
+        margin: 0 auto 20px;
     }
 }
 
@@ -2028,6 +2028,7 @@ html[dir='ltr'] .same .clinic {
     background-color: #0c7d9d;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .same .clinic .image .overlay i {
@@ -2042,8 +2043,6 @@ html[dir='ltr'] .same .clinic {
     opacity: 1;
     visibility: visible;
 }
-
-
 
 html[dir='rtl'] .same .clinic .image {
     margin-left: 30px;
@@ -2286,6 +2285,18 @@ html[dir='ltr'] .same .clinic .go i {
     .same .clinic .content {
         margin-top: 10px;
         text-align: center;
+    }
+
+    .same .clinic .sub-title {
+        text-align: center;
+    }
+
+    html[dir='rtl'] .same .clinic .go a {
+        margin-left: 0;
+    }
+
+    html[dir='ltr'] .same .clinic .go a {
+        margin-right: 0;
     }
 }
 
@@ -2992,5 +3003,9 @@ html[dir='ltr'] .single .date del {
         align-items: center;
         margin-bottom: 10px;
         text-align: center;
+    }
+
+    .single .font i {
+        margin: 2.5px;
     }
 }

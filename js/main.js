@@ -87,6 +87,7 @@ var swiper = new Swiper(".partner", {
   autoplay: {
       delay: 2000,
       },
+  loop: true,
 pagination: {
   el: ".partner .swiper-pagination",
   clickable: true,
