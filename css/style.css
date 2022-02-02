@@ -2014,6 +2014,10 @@ html[dir='ltr'] .same .clinic {
     cursor: pointer;
 }
 
+.same .clinic .image img {
+    border-radius: 15px;
+}
+
 .same .clinic .image .overlay {
     position: absolute;
     right: 0;
