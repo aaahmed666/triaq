@@ -297,6 +297,11 @@ html[dir='ltr'] .set-data label {
     text-align: center;
 }
 
+.same .setting .btn a.active {
+    background-color: #0081b8;
+    color: #FFF;
+}
+
 .same .setting .icon .image {
     width: 112px;
     height: 112px;
@@ -1013,6 +1018,11 @@ html[dir='ltr'] .firm .content .but {
 
 .sub .setting .btn a:hover {
     background-color: var(--primary-color);
+    color: #FFF;
+}
+
+.sub .setting .btn a.active {
+    background-color: #0080b6;
     color: #FFF;
 }
 
