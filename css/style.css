@@ -48,6 +48,10 @@ html[dir="ltr"] body {
     position: relative;
 }
 
+.image a {
+    display: block;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -100,6 +104,10 @@ a {
     transition: all 0.7s ease;
     opacity: 0;
     visibility: hidden;
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
 }
 
 .popup.open {
@@ -269,6 +277,33 @@ a {
         url("../fonts/bahij/ArbFONTS-Bahij_TheSansArabic-Plain.ttf");
 }
 
+
+html[dir="ltr"] .tooltip-inner {
+    width: 65px;
+    font-size: 12px;
+    width: max-content;
+    height: 20px;
+    padding: 0 10px;
+    border-radius: 0;
+    color: #FFF;
+    text-align: center;
+    background-color: #000;
+    font-family: 'Open Sans';
+}
+
+html[dir="rtl"] .tooltip-inner {
+    width: 65px;
+    font-size: 12px;
+    width: max-content;
+    height: 20px;
+    padding: 0 10px;
+    border-radius: 0;
+    color: #FFF;
+    text-align: center;
+    background-color: #000;
+    font-family: 'GEFlow';
+}
+
 @media (min-width:1200px) {
     .container {
         max-width: 1200px;
@@ -281,16 +316,10 @@ a {
 
 /* Start header */
 .header {
-    /* background-image: url("../image/bg.png"); */
     padding: 35px 0;
     position: relative;
 }
 
-/* .header .lang {
-    position: absolute;
-    top: 60px;
-    right: 0;
-} */
 
 .header .header__item {
     display: flex;
@@ -328,6 +357,10 @@ html[dir='ltr'] .header .header__menu a {
 
 .header .header__menu a:hover {
     color: var(--primary-color);
+}
+
+.haeder .swiper .image img {
+    border-radius: 20px;
 }
 
 .header .sign {
@@ -1154,14 +1187,14 @@ html[dir='ltr'] .offer .price del {
     width: 83px;
     height: 77px;
     opacity: 60%;
-    /* filter: grayscale(1); */
+    filter: grayscale(1);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .partner img:hover {
     opacity: 1;
-    /* filter: grayscale(0); */
+    filter: grayscale(0);
     transition: all 0.3s ease-in-out;
 }
 
@@ -1494,7 +1527,7 @@ html[dir='ltr'] .register form {
 .register form label {
     font-size: 16px;
     color: #FFF;
-    margin: 15px 10px;
+    margin: 15px 20px;
     width: 100%;
     text-align: start;
 }
@@ -1575,6 +1608,7 @@ html[dir='ltr'] .register .radio-item-1 span {
 .register .info-1 {
     width: 140px;
     height: 40px;
+    margin-top: 40px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1808,7 +1842,16 @@ html[dir='ltr'] .register form input.location {
     transition: all 0.3s ease-in-out;
 }
 
+.header .user img {
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
 .header .user:hover i {
+    background-color: var(--primary-color);
+}
+
+.header .user:hover image {
     background-color: var(--primary-color);
 }
 
@@ -2123,12 +2166,15 @@ html[dir='ltr'].same .clinic .icon i {
     align-items: center;
     text-decoration: none;
     font-size: 14px;
+    border-radius: 40px;
     color: var(--main-color);
     transition: all 0.3s ease-in-out;
 }
 
 .same .clinic .click a:hover {
-    color: var(--theme-color);
+    background-color: var(--theme-color);
+    color: #FFF;
+    
 }
 
 .same .clinic .click:nth-child(2) {
@@ -2310,6 +2356,11 @@ html[dir='ltr'] .same .clinic .go i {
     padding: 0;
 }
 
+.single .swiper-slide img {
+    width: 100%;
+    border-radius: 20px;
+}
+
 .single .divid {
     background-color: #FFF;
     padding: 25px 5px 140px;
@@ -2327,20 +2378,20 @@ html[dir='ltr'] .same .clinic .go i {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-    left: 40px;
+    left: 30px;
     right: auto;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-    right: 40px;
+    right: 30px;
     left: auto;
 }
 
 .swiper .swiper-button-next svg,
 .swiper .swiper-button-prev svg {
     stroke: rgb(255, 255, 255);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .swiper .swiper-button-next:hover svg,
@@ -2361,11 +2412,13 @@ html[dir='ltr'] .same .clinic .go i {
 .single .swiper-pagination-bullet {
     width: 13px;
     height: 13px;
-    background: #c9c9c9;
+    background: #000;
+    opacity: .5;
 }
 
 .single .swiper-pagination-bullet-active {
     background: #00dca6;
+    opacity: 1;
 }
 
 .single .content {
@@ -2446,7 +2499,8 @@ html[dir='ltr'] .same .clinic .go i {
 .single .click-1 a:hover,
 .single .click-2 a:hover,
 .single .click-3 a:hover {
-    color: var(--theme-color);
+    background-color: var(--theme-color);
+    color: #FFF;
 }
 
 .single p.sub-title {
@@ -2509,8 +2563,8 @@ html[dir='ltr'] .same .clinic .go i {
 .single .date {
     background-color: #FFF;
     border-radius: 20px;
-    padding: 40px 0 55px 0;
-    margin-bottom: 15px;
+    padding: 63px 0;
+    margin-bottom: 35px;
 }
 
 .single .photo:first-child {
@@ -2772,7 +2826,6 @@ html[dir='ltr'] .similar .price del {
 
 .similar .go {
     position: relative;
-    bottom: -15px;
     right: 50%;
     transform: translateX(50%);
     background-color: var(--primary-color);
@@ -2801,9 +2854,8 @@ html[dir='ltr'] .similar .price del {
     border-radius: 40px;
     line-height: 39px;
     text-align: center;
-    margin: 55px auto 0;
+    margin: 25px auto 0;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 20px;
 }
 
 .similar .cobon:hover {
@@ -3009,3 +3061,4 @@ html[dir='ltr'] .single .date del {
         margin: 2.5px;
     }
 }
+

@@ -87,7 +87,6 @@ var swiper = new Swiper(".partner", {
   autoplay: {
       delay: 2000,
       },
-  loop: true,
 pagination: {
   el: ".partner .swiper-pagination",
   clickable: true,
@@ -141,6 +140,10 @@ $(document).ready(function() {
           $('.footer .speed').slideToggle();
           });
   }
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 });
 
 
