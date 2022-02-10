@@ -2220,7 +2220,8 @@ html[dir='ltr'] .term .second ol li::before {
 
     .same .site .trip-1,
     .same .site .trip-2,
-    .same .site .trip-3 {
+    .same .site .trip-3,
+    .same .site .trip-4 {
         margin-bottom: 5px;
     }
 }
