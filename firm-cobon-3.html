@@ -51,8 +51,8 @@
                                     <li><a href="firm.html">المراكز الطبية</a></li>
                                     <li><a href="booking.html">الحجوزات الواردة</a></li>
                                     <li><a href="firm-cobons.html">الكوبونات الصادرة</a></li>
-                                    <li><a href="#">إعدادات البيانات</a></li>
-                                    <li><a href="setting.html">تسجيل الخروج</a></li>
+                                    <li><a href="setting.html">إعدادات البيانات</a></li>
+                                    <li><a href="#">تسجيل الخروج</a></li>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,11 @@
                                     <label for="">مواصفات الصفقة</label>
                                     <textarea name="" id="" placeholder="هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما"></textarea>
                                     <label for="">صور الكوبون</label>
-                                    <input type="file" multiple>
+                                    <div class="file-upload">
+                                        <input class="file-upload-input" type="file" name="myFile[]" id="myFile" multiple accept="image/*">
+                                        <button class="file-upload-button" type="button">استعراض</button>
+                                    </div>
+                                    <div class="preview"></div>
                                     <div class="price-group">
                                         <div class="title">
                                             <p class="title">سعر الكوبون</p>

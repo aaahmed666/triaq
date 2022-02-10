@@ -211,59 +211,18 @@ html[dir='ltr'] .set-data label {
     align-items: center;
 }
 
-.header .user:hover .drop {
-    opacity: 1;
-    visibility: visible;
-}
-
-.header .user .drop {
-    padding: 25px;
-    width: 200px;
-    margin-top: 50px;
-    position: absolute;
+.sub form input.location {
+    background: url("../map-marker-alt-solid.svg") no-repeat;
+    background-size: 18px;
     background-color: #FFF;
-    text-align: center;
-    border-radius: 20px;
-    display: block;
-    z-index: 10;
-    border: 1px solid #FFF;
-    box-shadow: 0 0 7px rgba(0, 128, 182, .25);
-    visibility: hidden;
-    opacity: 0;
 }
 
-.header .user .drop::before {
-    position: absolute;
-    content: "";
-    left: 50%;
-    top: -10px;
-    transform: translateX(-50%);
-    background-color: #FFF;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    width: 20px;
-    height: 10px;
+html[dir='rtl'] .sub form input.location {
+    background-position: top 10px left 20px;
 }
 
-.header .user .drop li {
-    list-style: none;
-    margin-bottom: 5px;
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-.header .user .drop li:not(:last-child) {
-    border-bottom: 1px solid #ddf0f4;
-}
-
-.header .user .drop ul li a {
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--main-color);
-    transition: all 0.3s ease-in-out;
-}
-
-.header .user .drop li a:hover {
-    color: var(--theme-color);
+html[dir='ltr'] .sub form input.location {
+    background-position: top 10px right 20px;
 }
 
 @media (max-width:767px) {
@@ -762,7 +721,7 @@ html[dir='ltr'] .same .profile .money i {
 /* End profile */
 /* Start frim */
 .same {
-    padding-top: 15px;
+    padding-top: 13px;
 }
 
 .same .firm {
@@ -815,6 +774,10 @@ html[dir='ltr'] .same .firm .create p.title {
     color: #FFF;
     background-color: var(--theme-color);
     transition: all 0.3s ease-in-out;
+}
+
+.firm .remove {
+    display: flex;
 }
 
 html[dir='rtl'] .same .firm .create .botn {
@@ -883,11 +846,11 @@ html[dir='ltr'] .same .firm .create .botn {
 }
 
 html[dir='rtl'] .firm .divid .start a {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 html[dir='ltr'] .firm .divid .start a {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .firm .divid .start i {
@@ -941,6 +904,7 @@ html[dir='ltr'] .firm .content .but {
 }
 /* End frim */
 .sub {
+    padding-top: 13px;
     padding-bottom: 50px;
 }
 
@@ -1078,7 +1042,7 @@ html[dir='ltr'] .sub form p.title {
     border-radius: 40px;
     line-height: 45px;
     background-color: #e7f6fa;
-    padding: 0 30px;
+    padding: 0 30px 0 50px;
     border: 1px solid #dcedf1;
     transition: all 0.3s ease-in-out;
 }
@@ -1143,6 +1107,7 @@ html[dir='ltr'] .sub form p.title {
 .sub .check-item {
     display: grid;
     grid-template-columns: 230px 320px 150px;
+    gap: 20px;
 }
 
 .sub p.title {
@@ -1224,7 +1189,6 @@ html[dir='ltr'] .sub .check-item-1 span {
 .sub .check-item label {
     font-size: 16px;
     color: #5e8d99;
-    margin: 25px 20px;
 }
 
 .sub .group-work p.title {
@@ -1711,6 +1675,7 @@ html[dir='ltr'] .create-cobon .but .bton {
 }
 
 .contact-us {
+    padding-top: 13px;
     padding-bottom: 50px;
 }
 
@@ -1795,6 +1760,7 @@ html[dir='ltr'] .create-cobon .but .bton {
 }
 
 .term {
+    padding-top: 13px;
     padding-bottom: 50px;
 }
 
@@ -1820,18 +1786,374 @@ html[dir='ltr'] .create-cobon .but .bton {
 
 .term .second {
     width: 100%;
+    margin-bottom: 25px;
+}
+
+html[dir='rtl'] .term .second {
     margin-right: 40px;
 }
 
-.term ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+html[dir='ltr'] .term .second {
+    margin-left: 40px;
 }
 
-.term .second ul li {
+.term .condition {
+    margin-bottom: 30px;
+}
+
+.term ol {
+    list-style: none;
+    counter-reset: counter;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.term .second ol li {
+    counter-increment: counter;
+    display: flex;
     font-size: 17px;
     color: #8e8f8f;
-    line-height: 16px;
+    line-height: 20px;
     margin-bottom: 15px;
+    
+}
+
+.term .second ol li::before {
+    content: "0" counter(counter) ".";
+    font-family: 'Oswald';
+    font-size: 17px;
+    line-height: 1;
+}
+
+html[dir='rtl'] .term .second ol li::before {
+    margin-left: 15px;
+}
+
+html[dir='ltr'] .term .second ol li::before {
+    margin-right: 15px;
+}
+
+.create-cobon .file-upload,
+.new-clinic .file-upload {
+    position: relative;
+    width: 500px;
+    height: 45px;
+    background-color: #e7f6fa;
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid #dcedf1;
+    color: #a0a1a1;
+    padding: 10px 30px;
+}
+
+.create-cobon .file-upload input[type="file"],
+.new-clinic .file-upload input[type="file"] {
+    display: none;
+}
+
+.create-cobon .file-upload-button,
+.new-clinic .file-upload-button {
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    background-color: #b4d4dc;
+    border-radius: 40px;
+    border: 1px solid #b4d4dc;
+    font-size: 14px;
+    color: #5e8d99;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+
+.create-cobon .preview ,
+.create-cobon .file-upload-label,
+.new-clinic .preview ,
+.new-clinic .file-upload-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.preview span {
+    position: relative;
+    width: fit-content;
+    padding: 0 20px;
+    height: 35px;
+    background-color: #b4d4dc;
+    border-radius: 40px;
+    border: 1px solid #b4d4dc;
+    font-size: 14px;
+    color: #5e8d99;
+    line-height: 35px;
+    text-align: center;
+    margin: 10px 5px 0 0;
+}
+
+.preview i {
+    position: relative;
+    top: 50%;
+    left: 15px;
+    transform: translateY(30%);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+@media (max-width:1199px) {
+    html[dir='rtl'] .same .divid {
+        padding-left: 0;
+    }
+    html[dir='ltr'] .same .divid {
+        padding-right: 0;
+    }
+
+    .firm p.sub-title {
+        text-align: center;
+    }
+    .divid .item {
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .same .content {
+        flex-direction: column;
+        margin-bottom: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    html[dir='rtl'] .firm .divid .start a {
+        margin-left: 5px;
+    }
+    html[dir='ltr'] .firm .divid .start a {
+        margin-right: 5px;
+    }
+    .firm .divid .start {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .firm .divid .remove {
+        display: flex;
+    }
+    .same .dot {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    html[dir='rtl'] .sub .new-clinic {
+        padding: 60px 0 70px 0;
+    }
+    html[dir='rtl'] .sub .new-clinic {
+        padding: 60px 0 70px 0;
+    }
+    .sub form input[type="text"] {
+        width: 100%;
+    }
+    .sub .group {
+        width: 100%;
+    }
+    .sub .check-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub form p.title {
+        margin-bottom: 15px;
+    }
+    .same .align .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .same .profile .awsome {
+        margin-top: 10px;
+    }
+    .same .profile .money {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .same .profile .font {
+        margin-top: 10px;
+    }
+    html[dir='rtl'] .same .content a.defin {
+        margin-right: 0;
+    }
+    html[dir='ltr'] .same .content a.defin {
+        margin-left: 0;
+    }
+    html[dir='rtl'] .same .content .botn {
+        margin-left: 0;
+    }
+    html[dir='ltr'] .same .content .botn {
+        margin-right: 0;
+    }
+    .same .content .botn {
+        margin-top: 10px;
+    }
+    .same .create-cobon {
+        padding: 60px 0 75px;
+    }
+    .create-cobon form input[type="text"] {
+        width: 100%;
+    }
+    .create-cobon form textarea {
+        width: 100%;
+    }
+    .create-cobon .price-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .create-cobon .price-group label {
+        margin: 15px;
+    }
+    .create-cobon form .but {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    html[dir='rtl'] .create-cobon .but p.title {
+        margin-right: 0;
+    }
+    html[dir='ltr'] .create-cobon .but p.title {
+        margin-left: 0;
+    }
+    html[dir='rtl'] .create-cobon .but .bton {
+        margin-left: 0;
+    }
+    html[dir='ltr'] .create-cobon .but .bton {
+        margin-right: 0;
+    }
+    .create-cobon .file-upload,
+    .new-clinic .file-upload {
+        width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+    .sub .check-item-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub .group-work {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .sub .group-work input[type="text"] {
+        margin: 0 15px;
+    }
+    .sub .group-work label {
+        margin: 5px 35px;
+    }
+    html[dir='rtl'] .same .firm .create p.title {
+        margin-right: 0;
+    }
+    html[dir='ltr'] .same .firm .create p.title {
+        margin-left: 0;
+    }
+    html[dir='rtl'] .same .firm .create .botn {
+        margin-left: 0;
+    }
+    html[dir='ltr'] .same .firm .create .botn {
+        margin-right: 0;
+    }
+    
+}
+
+@media (max-width:767px) {
+    .sub .check-item label {
+        margin: 10px;
+    }
+    .sub .check-item-1 label {
+        margin: 10px;
+    }
+    .sub .but {
+        margin-top: 15px;
+    }
+    .sub .content {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .sub .content .botn {
+        margin-top: 15px;
+    }
+    .same .align .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .same .profile .inside {
+        justify-content: center;
+        align-items: center;
+    }
+    .same .profile .awsome {
+        margin-top: 15px;
+    }
+    .partner {
+        padding: 35px 0;
+    }
+    .firm .divid .start {
+        flex-direction: column;
+    }
+    .same .firm .create {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .firm .create .botn {
+        margin-top: 10px;
+    }
+    .contact-us form {
+        padding: 60px 15px 80px;
+    }
+    .contact-us form input[type="text"] {
+        width: 100%;
+    }
+    .contact-us form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .same .profile .title {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    html[dir='rtl'] .same .profile p.title {
+        margin-right: 0;
+    }
+    .same .align .item .title a {
+        display: inline-block;
+        margin: 5px 0 0 0 ;
+    }
+    html[dir='rtl'] .same .profile .title a.book {
+        margin-right: 0;
+    }
+    html[dir='ltr'] .same .profile .title a.book {
+        margin-left: 0;
+    }
+    html[dir='rtl'] .same .divid .awsome i {
+        margin-right: 0;
+    }
+    html[dir='ltr'] .same .divid .awsome i {
+        margin-left: 0;
+    }
+    .firm .divid .descrip a {
+        margin-bottom: 10px;
+    }
+    html[dir='rtl'] .term .second {
+        margin-right: 15px;
+    }
+    html[dir='ltr'] .term .second {
+        margin-left: 15px;
+    }
 }

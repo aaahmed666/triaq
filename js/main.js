@@ -1,3 +1,34 @@
+let map;
+
+function initMap() {
+  const myLatLng = { lat: 31.049804, lng: 31.379884 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: myLatLng,
+  });
+
+  let marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+    draggable: true
+  });
+
+  google.maps.event.addListener(marker, "dragend", function (e) {
+    updateInput(e.latLng)
+});
+  }
+
+  function updateInput(latLng) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({
+        'latLng': latLng
+    }, function (results) {
+      document.getElementById('locationInput').value = results[0].formatted_address
+      document.getElementById('locationInput-1').value = results[0].formatted_address
+      console.log(results)
+    });
+}
 
 var swiper = new Swiper(".information", {
   autoplay: {
@@ -144,6 +175,10 @@ $(document).ready(function() {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+
+  $('#exampleModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  });
 });
 
 
@@ -186,6 +221,41 @@ popup.onclick = function() {
   lang.classList.remove("open");
   document.body.classList.remove('ovh');
 }
+
+
+
+
+
+Array.prototype.forEach.call(document.querySelectorAll('.file-upload-button'), function (button) {
+  const hiddeninput = button.parentElement.querySelector('.file-upload-input');
+  const label = document.querySelector('.new-clinic .file-upload-label');
+  const defualtLabelText = "No File(s) Selected";
+
+
+
+  button.addEventListener('click', function() {
+    hiddeninput.click();
+  });
+  
+  hiddeninput.addEventListener('change', function() {
+    const filenamelist = Array.prototype.map.call(hiddeninput.files, function (file) {
+      return file.name;
+    });
+
+    filenamelist.forEach(function(e) {
+      let span = document.querySelector('.preview');
+      let element = document.createElement("span");
+      let times = document.createElement('i');
+      times.classList.add("fas");
+      times.classList.add("fa-times")
+      span.appendChild(element);
+      span.appendChild(times)
+      element.innerHTML += e;
+      
+        console.log(element)
+      });
+  });
+});
 
 
 // (function(){

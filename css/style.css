@@ -419,6 +419,61 @@ html[dir='ltr'] .header .sign a {
     cursor: pointer;
 }
 
+.header .user:hover .drop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .user .drop {
+    padding: 25px;
+    width: 200px;
+    margin-top: 50px;
+    position: absolute;
+    background-color: #FFF;
+    text-align: center;
+    border-radius: 20px;
+    display: block;
+    z-index: 10;
+    border: 1px solid #FFF;
+    box-shadow: 0 0 7px rgba(0, 128, 182, .25);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header .user .drop::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    background-color: #FFF;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 20px;
+    height: 10px;
+}
+
+.header .user .drop li {
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.header .user .drop li:not(:last-child) {
+    border-bottom: 1px solid #ddf0f4;
+}
+
+.header .user .drop ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.header .user .drop li a:hover {
+    color: var(--theme-color);
+}
+
 
 @media (max-width:1199px) {
     .header .lang {
@@ -1540,7 +1595,7 @@ html[dir='ltr'] .register form {
     border: 1px solid #FFF;
     font-size: 16px;
     color: #000;
-    padding: 0 20px;
+    padding: 0 20px 0 50px;
     transition: all 0.3s ease;
 }
 
@@ -2287,6 +2342,9 @@ html[dir='ltr'] .same .clinic .go i {
 }
 
 @media(max-width:767px) {
+    .same .info {
+        width: 100%;
+    }
     .same .clinic {
         flex-direction: column;
         justify-content: center;
@@ -2321,7 +2379,11 @@ html[dir='ltr'] .same .clinic .go i {
 
 @media (max-width:576px) {
     .breadcrumb {
-        margin: 15px 25px;
+        display: none;
+    }
+
+    .same {
+        padding-top: 45px;
     }
 
     .same .clinic .go {
@@ -2378,13 +2440,13 @@ html[dir='ltr'] .same .clinic .go i {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-    left: 30px;
+    left: 15px;
     right: auto;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-    right: 30px;
+    right: 15px;
     left: auto;
 }
 
@@ -2401,7 +2463,7 @@ html[dir='ltr'] .same .clinic .go i {
 }
 
 .single .move .swiper-pagination {
-    bottom: 50px;
+    bottom: 20px;
 }
 
 .swiper-button-next:after,
@@ -2731,16 +2793,22 @@ html[dir='ltr'] .single .date .icon i {
 }
 
 @media (max-width:576px) {
+    .single {
+        padding-top: 45px;
+    }
+
     .single-cumb .breadcrumb {
-        margin: 15px 25px;
+        display: none;
     }
 
-    .single-cumb .breadcrumb-item {
-        font-size: 13px;
+    .single .forma {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 30px;
     }
 
-    .single-cumb .breadcrumb-item+.breadcrumb-item {
-        padding: 0 3px 0 0;
+    .single p.sub-title {
+        text-align: center;
     }
 }
 
@@ -3062,3 +3130,45 @@ html[dir='ltr'] .single .date del {
     }
 }
 
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body {
+    width: 500px;
+    height: 600px;
+    text-align: start;
+}
+
+.modal-footer {
+    margin-top: 30px;
+}
+
+.register .modal-body input[type="text"] {
+    width: 475px;
+    height: 45px;
+    outline: none;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    font-size: 16px;
+    color: #000;
+    padding: 0 20px;
+    background-color: var(--theme-color);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.sub .modal-body input[type="text"] {
+    width: 475px;
+    height: 45px;
+    outline: none;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    font-size: 16px;
+    color: #000;
+    padding: 0 20px;
+    background-color: var(--theme-color);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}

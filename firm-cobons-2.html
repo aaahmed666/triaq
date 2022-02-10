@@ -95,7 +95,11 @@
                                     <label for="">مواصفات الصفقة</label>
                                     <textarea name="" id="" placeholder=""></textarea>
                                     <label for="">صور الكوبون</label>
-                                    <input type="file" multiple>
+                                    <div class="file-upload">
+                                        <input class="file-upload-input" type="file" name="myFile[]" id="myFile" multiple accept="image/*">
+                                        <button class="file-upload-button" type="button">استعراض</button>
+                                    </div>
+                                    <div class="preview"></div>
                                     <div class="price-group">
                                         <div class="title">
                                             <p class="title">سعر الكوبون</p>
