@@ -4,10 +4,12 @@ body {
     background-repeat: no-repeat;
     background-position: top 160px right;
 }
+
 /* Start enter */
 .enter {
     padding: 15px 0 50px;
 }
+
 .enter .setting {
     padding: 45px 0;
     background-color: #FFF;
@@ -74,6 +76,7 @@ body {
     color: var(--main-color);
     text-align: center;
 }
+
 /* End enter */
 /* Start set-data */
 .set-data {
@@ -184,6 +187,7 @@ html[dir='ltr'] .set-data label {
     font-family: 'bahij';
     font-size: 14px;
 }
+
 /* End set-data */
 /* Start userdrop */
 .header .user {
@@ -229,9 +233,11 @@ html[dir='ltr'] .sub form input.location {
     .enter .similar {
         margin-bottom: 30px;
     }
+
     .set-data {
         padding: 50px 0;
     }
+
     html[dir='rtl'] .set-data form {
         margin-right: 0;
     }
@@ -244,6 +250,7 @@ html[dir='ltr'] .sub form input.location {
         width: 100% !important;
     }
 }
+
 /* End userdrop */
 .same .setting {
     padding: 45px 0;
@@ -352,6 +359,7 @@ html[dir='ltr'] .sub form input.location {
     border-color: var(--main-color);
     color: #FFF;
 }
+
 /* Start profile */
 .same {
     padding-bottom: 50px;
@@ -374,13 +382,13 @@ html[dir='ltr'] .sub form input.location {
 }
 
 .same .profile .user-profile:not(:nth-child(4)) {
-    border-bottom: 1px solid rgba(0, 82, 111,0.1);
+    border-bottom: 1px solid rgba(0, 82, 111, 0.1);
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
 
 .same .profile .user-profile-2:not(:nth-child(5)) {
-    border-bottom: 1px solid rgba(0, 82, 111,0.1);
+    border-bottom: 1px solid rgba(0, 82, 111, 0.1);
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
@@ -527,7 +535,7 @@ html[dir='ltr'] .same .divid .go i {
 
 html[dir='rtl'] .same .site .trip-1,
 html[dir='rtl'] .same .site .trip-2,
-html[dir='rtl'] .same .site .trip-3, 
+html[dir='rtl'] .same .site .trip-3,
 html[dir='rtl'] .same .site .trip-4 {
     margin-left: 5px;
 }
@@ -718,6 +726,7 @@ html[dir='ltr'] .same .profile .money i {
     font-family: 'Oswald';
     color: #bdbdbd;
 }
+
 /* End profile */
 /* Start frim */
 .same {
@@ -731,7 +740,7 @@ html[dir='ltr'] .same .profile .money i {
 }
 
 .same .firm .user-profile:not(:nth-child(3)) {
-    border-bottom: 1px solid rgba(0, 82, 111,0.1);
+    border-bottom: 1px solid rgba(0, 82, 111, 0.1);
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
@@ -902,6 +911,7 @@ html[dir='ltr'] .firm .content .but {
 .firm .content .but a:hover {
     background-color: var(--theme-color);
 }
+
 /* End frim */
 .sub {
     padding-top: 13px;
@@ -998,7 +1008,7 @@ html[dir='ltr'] .firm .content .but {
 
 html[dir='rtl'] .sub .new-clinic {
     padding: 60px 55px 70px 85px;
-} 
+}
 
 html[dir='ltr'] .sub .new-clinic {
     padding: 60px 85px 70px 55px;
@@ -1358,12 +1368,12 @@ html[dir='ltr'] .same .profile .inside i {
     height: 40px;
 }
 
-html[dir='rtl'] .same .profile .refus, 
+html[dir='rtl'] .same .profile .refus,
 html[dir='rtl'] .same .profile .accept {
     margin-left: 5px;
 }
 
-html[dir='ltr'] .same .profile .refus, 
+html[dir='ltr'] .same .profile .refus,
 html[dir='ltr'] .same .profile .accept {
     margin-right: 5px;
 }
@@ -1818,11 +1828,11 @@ html[dir='ltr'] .term .second {
     color: #8e8f8f;
     line-height: 20px;
     margin-bottom: 15px;
-    
+
 }
 
 .term .second ol li::before {
-    content: "0" counter(counter) ".";
+    content: "0"counter(counter) ".";
     font-family: 'Oswald';
     font-size: 17px;
     line-height: 1;
@@ -1870,9 +1880,9 @@ html[dir='ltr'] .term .second ol li::before {
 }
 
 
-.create-cobon .preview ,
+.create-cobon .preview,
 .create-cobon .file-upload-label,
-.new-clinic .preview ,
+.new-clinic .preview,
 .new-clinic .file-upload-label {
     display: flex;
     justify-content: flex-start;
@@ -1910,6 +1920,7 @@ html[dir='ltr'] .term .second ol li::before {
     html[dir='rtl'] .same .divid {
         padding-left: 0;
     }
+
     html[dir='ltr'] .same .divid {
         padding-right: 0;
     }
@@ -1917,120 +1928,153 @@ html[dir='ltr'] .term .second ol li::before {
     .firm p.sub-title {
         text-align: center;
     }
+
     .divid .item {
         margin-top: 15px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
     .same .content {
         flex-direction: column;
         margin-bottom: 25px;
         justify-content: center;
         align-items: center;
     }
+
     html[dir='rtl'] .firm .divid .start a {
         margin-left: 5px;
     }
+
     html[dir='ltr'] .firm .divid .start a {
         margin-right: 5px;
     }
+
     .firm .divid .start {
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
     }
+
     .firm .divid .remove {
         display: flex;
     }
+
     .same .dot {
         justify-content: center;
         margin-top: 30px;
     }
+
     html[dir='rtl'] .sub .new-clinic {
         padding: 60px 0 70px 0;
     }
+
     html[dir='rtl'] .sub .new-clinic {
         padding: 60px 0 70px 0;
     }
+
     .sub form input[type="text"] {
         width: 100%;
     }
+
     .sub .group {
         width: 100%;
     }
+
     .sub .check-item {
         display: flex;
         flex-direction: column;
     }
+
     .sub form p.title {
         margin-bottom: 15px;
     }
+
     .same .align .item {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 15px;
     }
+
     .same .profile .awsome {
         margin-top: 10px;
     }
+
     .same .profile .money {
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
     .same .profile .font {
         margin-top: 10px;
     }
+
     html[dir='rtl'] .same .content a.defin {
         margin-right: 0;
     }
+
     html[dir='ltr'] .same .content a.defin {
         margin-left: 0;
     }
+
     html[dir='rtl'] .same .content .botn {
         margin-left: 0;
     }
+
     html[dir='ltr'] .same .content .botn {
         margin-right: 0;
     }
+
     .same .content .botn {
         margin-top: 10px;
     }
+
     .same .create-cobon {
         padding: 60px 0 75px;
     }
+
     .create-cobon form input[type="text"] {
         width: 100%;
     }
+
     .create-cobon form textarea {
         width: 100%;
     }
+
     .create-cobon .price-group {
         display: flex;
         flex-direction: column;
     }
+
     .create-cobon .price-group label {
         margin: 15px;
     }
+
     .create-cobon form .but {
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
     html[dir='rtl'] .create-cobon .but p.title {
         margin-right: 0;
     }
+
     html[dir='ltr'] .create-cobon .but p.title {
         margin-left: 0;
     }
+
     html[dir='rtl'] .create-cobon .but .bton {
         margin-left: 0;
     }
+
     html[dir='ltr'] .create-cobon .but .bton {
         margin-right: 0;
     }
+
     .create-cobon .file-upload,
     .new-clinic .file-upload {
         width: 100%;
@@ -2042,83 +2086,142 @@ html[dir='ltr'] .term .second ol li::before {
         display: flex;
         flex-direction: column;
     }
+
     .sub .group-work {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
     }
+
     .sub .group-work input[type="text"] {
         margin: 0 15px;
     }
+
     .sub .group-work label {
         margin: 5px 35px;
     }
+
     html[dir='rtl'] .same .firm .create p.title {
         margin-right: 0;
     }
+
     html[dir='ltr'] .same .firm .create p.title {
         margin-left: 0;
     }
+
     html[dir='rtl'] .same .firm .create .botn {
         margin-left: 0;
     }
+
     html[dir='ltr'] .same .firm .create .botn {
         margin-right: 0;
     }
-    
+
 }
 
 @media (max-width:767px) {
     .sub .check-item label {
         margin: 10px;
     }
+
     .sub .check-item-1 label {
         margin: 10px;
     }
+
     .sub .but {
         margin-top: 15px;
     }
+
     .sub .content {
         flex-direction: column;
         margin-bottom: 25px;
     }
+
     .sub .content .botn {
         margin-top: 15px;
     }
+
     .same .align .item {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .same .profile .inside {
         justify-content: center;
         align-items: center;
     }
+
     .same .profile .awsome {
         margin-top: 15px;
     }
+
     .partner {
         padding: 35px 0;
     }
+
     .firm .divid .start {
         flex-direction: column;
     }
+
     .same .firm .create {
         flex-direction: column;
         margin-bottom: 30px;
     }
+
     .firm .create .botn {
         margin-top: 10px;
     }
+
     .contact-us form {
         padding: 60px 15px 80px;
     }
+
     .contact-us form input[type="text"] {
         width: 100%;
     }
+
     .contact-us form textarea {
         width: 100%;
+    }
+
+    .same .divid .go {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    html[dir='rtl'] .same .divid .go a {
+        margin-left: 0;
+    }
+
+    html[dir='ltr'] .same .divid .go a {
+        margin-right: 0;
+    }
+
+    .same .contact {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .same .profile .font {
+        display: flex;
+    }
+
+    .same .site {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .same .site .trip-1,
+    .same .site .trip-2,
+    .same .site .trip-3 {
+        margin-bottom: 5px;
     }
 }
 
@@ -2128,31 +2231,40 @@ html[dir='ltr'] .term .second ol li::before {
         align-items: center;
         flex-direction: column;
     }
+
     html[dir='rtl'] .same .profile p.title {
         margin-right: 0;
     }
+
     .same .align .item .title a {
         display: inline-block;
-        margin: 5px 0 0 0 ;
+        margin: 5px 0 0 0;
     }
+
     html[dir='rtl'] .same .profile .title a.book {
         margin-right: 0;
     }
+
     html[dir='ltr'] .same .profile .title a.book {
         margin-left: 0;
     }
+
     html[dir='rtl'] .same .divid .awsome i {
         margin-right: 0;
     }
+
     html[dir='ltr'] .same .divid .awsome i {
         margin-left: 0;
     }
+
     .firm .divid .descrip a {
         margin-bottom: 10px;
     }
+
     html[dir='rtl'] .term .second {
         margin-right: 15px;
     }
+
     html[dir='ltr'] .term .second {
         margin-left: 15px;
     }
