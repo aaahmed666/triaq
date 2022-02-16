@@ -2428,7 +2428,7 @@ html[dir='ltr'] .same .clinic .go i {
 
 .single .divid {
     background-color: #FFF;
-    padding: 25px 5px 140px;
+    padding: 25px 5px 150px;
     border-radius: 20px;
 }
 
@@ -3182,11 +3182,11 @@ html[dir='ltr'] .single .date del {
 
 @media (max-width:767px) {
     .register .modal-body input[type="text"] {
-        width: 320px;
+        width: 100%;
     }
 
     .sub .modal-body input[type="text"] {
-        width: 320px;
+        width: 100%;
     }
 
     .modal-body {

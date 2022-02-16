@@ -2251,11 +2251,11 @@ html[dir='ltr'] .term .second ol li::before {
     }
 
     html[dir='rtl'] .same .divid .awsome i {
-        margin-right: 0;
+        margin-right: 5px;
     }
 
     html[dir='ltr'] .same .divid .awsome i {
-        margin-left: 0;
+        margin-left: 5px;
     }
 
     .firm .divid .descrip a {
