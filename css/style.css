@@ -106,8 +106,10 @@ a {
     visibility: hidden;
 }
 
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
     opacity: 1;
+
 }
 
 .popup.open {
@@ -2133,7 +2135,7 @@ html[dir='ltr'] .same .clinic {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #FFF;
 }
 
@@ -2229,7 +2231,7 @@ html[dir='ltr'].same .clinic .icon i {
 .same .clinic .click a:hover {
     background-color: var(--theme-color);
     color: #FFF;
-    
+
 }
 
 .same .clinic .click:nth-child(2) {
@@ -2345,6 +2347,7 @@ html[dir='ltr'] .same .clinic .go i {
     .same .info {
         width: 100%;
     }
+
     .same .clinic {
         flex-direction: column;
         justify-content: center;
@@ -2442,24 +2445,28 @@ html[dir='ltr'] .same .clinic .go i {
 .swiper-rtl .swiper-button-next {
     left: 15px;
     right: auto;
+    z-index: 10;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
     right: 15px;
     left: auto;
+    z-index: 10;
 }
 
 .swiper .swiper-button-next svg,
 .swiper .swiper-button-prev svg {
     stroke: rgb(255, 255, 255);
     opacity: 0.7;
+    z-index: 10;
 }
 
 .swiper .swiper-button-next:hover svg,
 .swiper .swiper-button-prev:hover svg {
     stroke: rgb(255, 255, 255);
     opacity: 1;
+    z-index: 10;
 }
 
 .single .move .swiper-pagination {
@@ -3177,7 +3184,7 @@ html[dir='ltr'] .single .date del {
     .register .modal-body input[type="text"] {
         width: 320px;
     }
-    
+
     .sub .modal-body input[type="text"] {
         width: 320px;
     }
@@ -3185,4 +3192,21 @@ html[dir='ltr'] .single .date del {
     .modal-body {
         width: 350px;
     }
+}
+
+.single .move .over {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.300455216266194) 80%, rgba(255, 255, 255, .3) 100%);
+}
+
+.single .move {
+    border-radius: 20px;
+    overflow: hidden;
 }
